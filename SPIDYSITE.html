@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vt3b64x15a");
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Amazing Spider-Man Remaster</title>
+  <style>
+    :root {
+      --primary-color: #e62429;
+      --background-color: #0d0d0d;
+      --text-color: #f0f0f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 0 10px var(--primary-color);
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    /* LOGIN SECTION */
+    #login-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #login-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #login-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    #login-form {
+      position: relative;
+      z-index: 1;
+      max-width: 350px;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px var(--primary-color);
+      text-align: center;
+      backdrop-filter: blur(5px);
+      color: #fff;
+    }
+
+    #login-form h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    #login-form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: 1px solid var(--primary-color);
+      background-color: #111;
+      color: #fff;
+    }
+
+    #login-form button {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #login-form button:hover {
+      background-color: #ff3947;
+    }
+
+    #login-message {
+      color: #55ff8e;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    /* MAIN CONTENT */
+    #main-content {
+      display: none;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    section {
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    hr {
+      border: 1px solid var(--primary-color);
+      margin: 2rem 0;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+      color: #aaa;
+      margin-top: 2rem;
+      border-top: 2px solid var(--primary-color);
+    }
+
+    /* POSTER GALLERY */
+    #poster-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .poster-container {
+      position: relative;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid var(--primary-color);
+      cursor: pointer;
+      transition: transform 0.4s;
+    }
+
+    .poster-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .poster-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .poster-container:hover .poster-info {
+      opacity: 1;
+    }
+
+    /* SHUFFLE ANIMATION */
+    .shuffle-animation {
+      animation: flip 0.6s ease forwards;
+    }
+
+    @keyframes flip {
+      0% { transform: rotateY(360deg); opacity: 1; }
+      50% { transform: rotateY(90deg); opacity: 0.5; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    /* ANIMATION SECTION */
+    #animation-placeholder {
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    #animation-placeholder video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div id="login-section">
+    <video id="login-video" autoplay muted >
+      <source src=" c:\Users\VLD\AppData\Local\Packages\5970SecurityInternetDevel.HDVideoDownloaderForAll-_hr99tcdwdakq2\LocalCache\P1cXyTLKGbM_4fa23e54b00894dea8fc76c345ae43244.webm" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="login-overlay"></div>
+    <form id="login-form">
+      <h2>Unlock Spider-Verse</h2>
+      <input type="password" id="password" placeholder="Enter Secret Password" required />
+      <button type="submit">Enter</button>
+      <p id="login-message">Incorrect password. Try again.</p>
+    </form>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content">
+    <header>
+       THE SPIDERVERSE BY AV23
+    </header>
+
+    <section>
+      <p>
+        WELCOME SPIDER-MAN UNIVERSE (AN MULTIVERSE CONCEPT) WEB PAGE
+        <br>
+        CREATED BY MR. ADITYA . P. VISHWAKARMA
+      </p>
+      <p>
+        Watch the multiverse trailer about knowing how its breakdown the universe by different timeline
+      </p>
+      <a href="  https://youtu.be/U___kgF_Rno?si=79AM_1uOVUjcLtUO" target="_blank">
+        ▶️ Watch Trailer
+      </a>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Posters Gallery</h2>
+      <div id="poster-gallery">
+        <!-- Example poster with overlay info -->
+        <div class="poster-container">
+          <img src=" https://i.pinimg.com/736x/10/fa/f1/10faf1af3839c318564710fca0326a9a.jpg  " alt="Poster 1" />
+          <div class="poster-info">SCARLET SPIDERMAN </div>
+        </div>
+        <div class="poster-container">
+          <img src=" https://i.pinimg.com/236x/ee/d6/10/eed610aeb65249f74c8724abc61fc9ab.jpg " alt="Poster 2" />
+          <div class="poster-info">MEQUAL O HARA</div>
+        </div>
+        <div class="poster-container">
+          <img src="  https://w0.peakpx.com/wallpaper/369/380/HD-wallpaper-tom-holland-spiderman-spider-man.jpg " alt="Poster 3" />
+          <div class="poster-info">PETER 1</div>
+        </div>
+        <div class="poster-container">
+          <img src="  https://wallpapercat.com/w/full/5/9/5/477984-1152x2048-iphone-hd-spider-man-tobey-maguire-wallpaper.jpg" alt="Poster 4" />
+          <div class="poster-info">PETER 2</div>
+        </div>
+        <div class="poster-container">
+          <img src="   https://wallpaper-house.com/data/out/6/wallpaper2you_136010.jpg" alt="Poster 5" />
+          <div class="poster-info">PETER 3</div>
+        </div>
+        <div class="poster-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS98CLj8ZOjEWKsArhW_sQpobQ7mbwkBziNg&s" alt="Poster 6" />
+          <div class="poster-info">Battle atop the bridge</div>
+        </div>
+        <div class="poster-container">
+          <img src="https://filmwonk.net/wp-content/uploads/2014/05/amazing-spider-man-2-poster.jpg" alt="Poster 7" />
+          <div class="poster-info">A new suit for a new challenge</div>
+        </div>
+        <div class="poster-container">
+          <img src="https://media2.firstshowing.net/firstshowing/img4/amazingspiderman-poster-pov-full.jpg" alt="Poster 8" />
+          <div class="poster-info">First-person web-sling</div>
+        </div>
+        <div class="poster-container">
+          <img src="c:\Users\VLD\Downloads\wp5037980-spider-man-hd-4k-mobile-wallpapers.jpg" alt="Poster 9" />
+          <div class="poster-info">Not power, but responsibility</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="animation-placeholder">
+      <video src=" c:\Users\VLD\AppData\Local\Packages\5970SecurityInternetDevel.HDVideoDownloaderForAll-_hr99tcdwdakq2\LocalCache\kLyjpkZDidY_SpiderManSaiyaaraFt.PeterAndGwenSheWasMyMJabe1e542d53e453eb2f80a734adacbc4.mp4" autoplay loop muted playsinline></video>
+    </section>
+
+    <section>
+      <b>
+        "The Amazing Spider-Man" film tells a unique origin story of Peter Parker, focusing on his teenage years, his parents' mysterious disappearance, and his relationship with Gwen Stacy while grappling with his newfound powers.
+      </b>
+      <br>
+      <i>THE MARVEL CINEMATIC UNIVERSE</i>
+      <br>
+      <u>THE GREATEST CHEMISTRY EVER HAD ....</u>
+      <br>
+      <big>NOT POWER BUT RESPONSIBILITY</big>
+    </section>
+
+    <hr />
+
+    <footer>
+      <h3>contact me  - 9370790460</h3>
+    </footer>
+  </div>
+
+  <script>
+    const PASSWORD = "spiderman";
+    const loginSection = document.getElementById('login-section');
+    const loginForm = document.getElementById('login-form');
+    const loginMessage = document.getElementById('login-message');
+    const mainContent = document.getElementById('main-content');
+    const posterGallery = document.getElementById('poster-gallery');
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const entered = document.getElementById('password').value;
+      if (entered === PASSWORD) {
+        loginSection.style.display = 'none';
+        mainContent.style.display = 'block';
+        shuffleAndAnimate();
+      } else {
+        loginMessage.style.display = 'block';
+      }
+    });
+
+    function shuffleAndAnimate() {
+      const posters = Array.from(posterGallery.children);
+      for (let i = posters.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [posters[i], posters[j]] = [posters[j], posters[i]];
+      }
+      posters.forEach(poster => {
+        poster.classList.add('shuffle-animation');
+        posterGallery.appendChild(poster);
+        poster.addEventListener('animationend', () => {
+          poster.classList.remove('shuffle-animation');
+        }, { once: true });
+      });
+    }
+  </script>
+</body>
+</html>
